@@ -1,0 +1,9 @@
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.app-heading {
+    color: tomato;
+    margin: 1rem 0;
+}

@@ -1,0 +1,20 @@
+.user {
+    padding: 1rem 2rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.delete-user-btn {
+    margin-left: auto;
+    background-color: #e03131;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+}
+
+.delete-user-btn:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,60 @@
+.add-user-form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.form-control label {
+    font-size: 1.25rem;
+}
+
+.form-control input {
+    font-size: 1.25rem;
+    padding: 10px;
+    border: 3px solid #000;
+    border-radius: 10px;
+}   
+
+.form-control input:focus {
+    background-color: #f1f3f5;
+    outline: 3px solid #000;
+}
+
+.form-control.invalid input {
+    border-color: red;
+    border-width: 4px;
+}
+
+.form-control.invalid input:focus {
+    outline-color: red;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.form-actions button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.add-user-btn {
+    background-color: #37b24d;
+}
+
+.reset-btn {
+    background-color: #fcc419;
+    color: #000;
+}

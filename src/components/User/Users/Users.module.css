@@ -1,0 +1,11 @@
+.users-card {
+    font-size: 1.5rem;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

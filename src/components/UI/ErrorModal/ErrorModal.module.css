@@ -1,0 +1,57 @@
+.error-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;    
+    width: 50%;
+    transform: translate(-50%, -100%);
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 111;
+}
+
+@media (max-width: 750px) {
+    .error-modal {
+        width: 75%;
+    }
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100vw;
+    height: 100vh;
+}
+
+.header, .content, .footer {
+    padding: 1rem 2rem;
+}
+
+.header {
+    background-color: #f03e3e;
+    color: #fff;
+}
+
+.content {
+    font-size: 1.25rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.close-btn {
+    font-size: 1.5rem;
+    background-color: #94d82d;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 7.5px;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+}

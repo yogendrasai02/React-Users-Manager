@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import styles from "./App.module.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import AddUserCard from "./components/AddUser/AddUserCard/AddUserCard";
+import Users from "./components/User/Users/Users";
+
+const App = () => {
+	const [usersList, setUsersList] = useState([]);
+
+	const addNewUserHandler = (newUserData) => {
+		// console.log('➡️Inside App.js');
+		// console.log(newUserData);
+		setUsersList((prevUsersList) => [newUserData, ...prevUsersList]);
+	};
+
+	const deleteUserHandler = (userId) => {
+		// console.log("➡️In App.js");
+		setUsersList((prevUsersList) => prevUsersList.filter((user) => user.id !== userId));
+	};
+
+	return (
+		<div className={styles.container}>
+			<h1 className={`${styles["app-heading"]} text-center`}>Users Manager</h1>
+			<AddUserCard onAddNewUser={addNewUserHandler} />
+			<Users onDeleteUser={deleteUserHandler} users={usersList} />
+		</div>
+	);
+};
 
 export default App;
